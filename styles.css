@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a7c59 0%, #2d5a3d 100%);
+    color: #f0f0f0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(46, 46, 46, 0.95);
+    border: 4px solid #8b8b8b;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #5ec975;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #8b8b8b;
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: #7ed957;
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 5px solid #5ec975;
+}
+
+h3 {
+    color: #aad576;
+    font-size: 1.3em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h4 {
+    color: #aad576;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.subtitle {
+    color: #b0b0b0;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.section {
+    background: rgba(60, 60, 60, 0.6);
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid #5ec975;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateX(5px);
+}
+
+.highlight {
+    background: rgba(94, 201, 117, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: 2px solid #5ec975;
+}
+
+.warning {
+    background: rgba(255, 193, 7, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: 2px solid #ffc107;
+    color: #ffd54f;
+}
+
+.link {
+    display: inline-block;
+    background: #5ec975;
+    color: #2e2e2e;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.link:hover {
+    background: #7ed957;
+    border-color: #aad576;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94, 201, 117, 0.4);
+}
+
+.step-number {
+    background: #5ec975;
+    color: #2e2e2e;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.step-number:hover {
+    transform: rotate(360deg);
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #5ec975;
+}
+
+code {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: #7ed957;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+strong {
+    color: #aad576;
+}
+
+/* Estilos para la sección de descarga */
+.download-section {
+    text-align: center;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #5ec975 0%, #4ab863 100%);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: 3px solid #7ed957;
+    box-shadow: 0 5px 15px rgba(94, 201, 117, 0.3);
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #7ed957 0%, #5ec975 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(94, 201, 117, 0.5);
+    border-color: #aad576;
+}
+
+.download-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Estilos para la IP del servidor */
+.server-ip {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.ip-address {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: #5ec975;
+    font-family: 'Courier New', monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: 2px solid #5ec975;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.copy-btn {
+    background: #5ec975;
+    color: #2e2e2e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    border: 2px solid transparent;
+}
+
+.copy-btn:hover {
+    background: #7ed957;
+    border-color: #aad576;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94, 201, 117, 0.4);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.copy-btn.copied {
+    background: #4ab863;
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Estilos para los pasos de conexión */
+.connection-steps {
+    margin: 20px 0;
+}
+
+.step-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px solid rgba(94, 201, 117, 0.3);
+    transition: all 0.3s ease;
+}
+
+.step-box:hover {
+    border-color: #5ec975;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.step-box ul {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .server-ip {
+        flex-direction: column;
+    }
+    
+    .ip-address {
+        width: 100%;
+        font-size: 1.1em;
+    }
+    
+    .copy-btn {
+        width: 100%;
+    }
+}
